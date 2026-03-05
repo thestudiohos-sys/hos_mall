@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "High-fashion editorial shot",
+      "imageUrl": "https://picsum.photos/seed/fashion-hero/1920/1080",
+      "imageHint": "fashion editorial luxury"
+    },
+    {
+      "id": "collection-1",
+      "description": "Summer evening dress",
+      "imageUrl": "https://picsum.photos/seed/dress-1/600/800",
+      "imageHint": "elegant dress fashion"
+    },
+    {
+      "id": "collection-2",
+      "description": "Sophisticated silk blouse",
+      "imageUrl": "https://picsum.photos/seed/blouse-1/600/800",
+      "imageHint": "silk clothing fashion"
+    },
+    {
+      "id": "collection-3",
+      "description": "Tailored velvet blazer",
+      "imageUrl": "https://picsum.photos/seed/blazer-1/600/800",
+      "imageHint": "velvet blazer fashion"
+    },
+    {
+      "id": "story-image",
+      "description": "Inside a luxury fashion atelier",
+      "imageUrl": "https://picsum.photos/seed/atelier/800/600",
+      "imageHint": "fashion atelier workshop"
+    },
+    {
+      "id": "user-1",
+      "description": "Customer portrait",
+      "imageUrl": "https://picsum.photos/seed/user1/100/100",
+      "imageHint": "smiling person face"
+    },
+    {
+      "id": "user-2",
+      "description": "Customer portrait",
+      "imageUrl": "https://picsum.photos/seed/user2/100/100",
+      "imageHint": "elegant person portrait"
+    }
+  ]
+}
