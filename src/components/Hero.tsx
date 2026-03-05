@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Download } from 'lucide-react';
 
 export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero');
@@ -29,8 +30,9 @@ export function Hero() {
           <Button size="lg" className="bg-white text-primary hover:bg-secondary hover:text-primary rounded-none px-10 py-8 text-sm uppercase tracking-[0.2em]">
             컬렉션 쇼핑하기
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-none px-10 py-8 text-sm uppercase tracking-[0.2em]">
-            브랜드 필름
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-none px-10 py-8 text-sm uppercase tracking-[0.2em] group">
+            <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+            디지털 룩북 다운로드
           </Button>
         </div>
       </div>

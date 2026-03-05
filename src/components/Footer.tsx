@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Apple, PlayCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export function Footer() {
   return (
@@ -7,9 +9,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
             <h2 className="font-headline text-3xl font-black mb-6 uppercase tracking-tighter">H.O.S_Mall</h2>
-            <p className="opacity-60 text-sm leading-relaxed">
+            <p className="opacity-60 text-sm leading-relaxed mb-8">
               우아함의 정수에서 럭셔리를 재정의합니다. H.O.S_Mall의 모든 의상은 당신의 품격을 높이는 비전을 담고 있습니다.
             </p>
+            <div className="space-y-3">
+              <h4 className="text-xs uppercase tracking-widest font-bold opacity-80">Download App</h4>
+              <div className="flex flex-wrap gap-2">
+                <Button variant="outline" size="sm" className="bg-transparent border-white/20 hover:bg-white hover:text-primary text-[10px] h-9 px-3">
+                  <Apple className="mr-1 h-3 w-3" /> App Store
+                </Button>
+                <Button variant="outline" size="sm" className="bg-transparent border-white/20 hover:bg-white hover:text-primary text-[10px] h-9 px-3">
+                  <PlayCircle className="mr-1 h-3 w-3" /> Play Store
+                </Button>
+              </div>
+            </div>
           </div>
           
           <div>
@@ -43,7 +56,7 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 flex flex-col md:row justify-between items-center gap-4 text-xs opacity-40 uppercase tracking-widest">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-40 uppercase tracking-widest">
           <p>© 2024 H.O.S_Mall. All Rights Reserved.</p>
           <div className="flex gap-8">
             <Link href="#">이용 약관</Link>
