@@ -8,9 +8,9 @@ export function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
           <div className="space-y-12">
             <div>
-              <h2 className="font-headline text-4xl md:text-5xl text-primary mb-8">Visit the Atelier</h2>
+              <h2 className="font-headline text-4xl md:text-5xl text-primary mb-8">아틀리에 방문하기</h2>
               <p className="text-lg text-muted-foreground max-w-md">
-                Experience our full collection in person at our flagship locations worldwide.
+                전 세계 플래그십 매장에서 전체 컬렉션을 직접 경험해 보세요.
               </p>
             </div>
             
@@ -18,18 +18,18 @@ export function Contact() {
               <div className="flex items-start gap-6">
                 <MapPin className="h-6 w-6 text-accent shrink-0" />
                 <div>
-                  <h4 className="font-bold text-primary mb-2">Seoul Flagship</h4>
-                  <p className="text-muted-foreground">123 Gangnam-daero, Seoul, Korea</p>
-                  <p className="text-sm mt-1">Mon-Sun: 10:00 AM - 9:00 PM</p>
+                  <h4 className="font-bold text-primary mb-2">서울 플래그십</h4>
+                  <p className="text-muted-foreground">서울특별시 강남구 강남대로 123</p>
+                  <p className="text-sm mt-1">월-일: 오전 10:00 - 오후 9:00</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-6">
                 <MapPin className="h-6 w-6 text-accent shrink-0" />
                 <div>
-                  <h4 className="font-bold text-primary mb-2">London Studio</h4>
+                  <h4 className="font-bold text-primary mb-2">런던 스튜디오</h4>
                   <p className="text-muted-foreground">45 Savile Row, Mayfair, London</p>
-                  <p className="text-sm mt-1">Mon-Sat: 11:00 AM - 7:00 PM</p>
+                  <p className="text-sm mt-1">월-토: 오전 11:00 - 오후 7:00</p>
                 </div>
               </div>
             </div>
@@ -48,21 +48,21 @@ export function Contact() {
           </div>
 
           <div className="bg-white p-12 shadow-xl border border-primary/10">
-            <h3 className="font-headline text-3xl text-primary mb-8">Inquiries</h3>
+            <h3 className="font-headline text-3xl text-primary mb-8">문의하기</h3>
             <form className="space-y-6">
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-muted-foreground">Full Name</label>
-                <input type="text" className="w-full border-b border-primary/20 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="Alexander McQueen" />
+                <label className="text-xs uppercase tracking-widest font-bold text-muted-foreground">성함</label>
+                <input type="text" className="w-full border-b border-primary/20 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="홍길동" />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-muted-foreground">Email Address</label>
+                <label className="text-xs uppercase tracking-widest font-bold text-muted-foreground">이메일 주소</label>
                 <input type="email" className="w-full border-b border-primary/20 py-3 focus:outline-none focus:border-accent transition-colors" placeholder="atelier@hosmall.com" />
               </div>
               <div className="space-y-2">
-                <label className="text-xs uppercase tracking-widest font-bold text-muted-foreground">Message</label>
-                <textarea className="w-full border-b border-primary/20 py-3 focus:outline-none focus:border-accent transition-colors min-h-[120px]" placeholder="How can we assist you?" />
+                <label className="text-xs uppercase tracking-widest font-bold text-muted-foreground">메시지</label>
+                <textarea className="w-full border-b border-primary/20 py-3 focus:outline-none focus:border-accent transition-colors min-h-[120px]" placeholder="무엇을 도와드릴까요?" />
               </div>
-              <Button className="w-full py-8 text-sm uppercase tracking-[0.3em] font-bold">Send Message</Button>
+              <Button className="w-full py-8 text-sm uppercase tracking-[0.3em] font-bold">메시지 보내기</Button>
             </form>
           </div>
         </div>

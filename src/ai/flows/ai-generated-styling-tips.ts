@@ -34,6 +34,8 @@ Your task is to generate compelling styling tips and an evocative description fo
 The styling tips should be practical and inspire potential customers on how to wear the item for various occasions, enhancing its appeal.
 The evocative description should highlight the unique charm, fabric, design, and emotional connection of the clothing item, making it sound irresistible.
 
+IMPORTANT: You MUST provide all your responses in Korean.
+
 Clothing Item Description: {{{clothingItemDescription}}}`,
 });
 

@@ -11,9 +11,9 @@ export function Navbar() {
             H.O.S_Mall
           </Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-            <Link href="#collections" className="hover:text-primary transition-colors">Collections</Link>
-            <Link href="#story" className="hover:text-primary transition-colors">Our Story</Link>
-            <Link href="#ai-stylist" className="hover:text-accent transition-colors">AI Stylist</Link>
+            <Link href="#collections" className="hover:text-primary transition-colors">컬렉션</Link>
+            <Link href="#story" className="hover:text-primary transition-colors">브랜드 스토리</Link>
+            <Link href="#ai-stylist" className="hover:text-accent transition-colors">AI 스타일리스트</Link>
           </div>
         </div>
         
@@ -28,7 +28,7 @@ export function Navbar() {
             <Menu className="h-5 w-5" />
           </Button>
           <div className="hidden md:block">
-            <Button className="font-medium uppercase tracking-widest text-xs px-6">Explore</Button>
+            <Button className="font-medium uppercase tracking-widest text-xs px-6">둘러보기</Button>
           </div>
         </div>
       </div>

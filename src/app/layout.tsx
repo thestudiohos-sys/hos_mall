@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'H.O.S_Mall Ascent | Luxury Fashion & Collections',
-  description: 'Experience the pinnacle of fashion with H.O.S_Mall. Explore our unique collections and brand philosophy.',
+  title: 'H.O.S_Mall Ascent | 프리미엄 럭셔리 패션 & 컬렉션',
+  description: 'H.O.S_Mall과 함께 패션의 정점을 경험하세요. 유니크한 컬렉션과 브랜드 철학을 만나보세요.',
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

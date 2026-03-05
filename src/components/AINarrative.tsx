@@ -32,16 +32,16 @@ export function AINarrative() {
           <div className="flex justify-center mb-6">
             <Sparkles className="h-12 w-12 text-accent" />
           </div>
-          <h2 className="font-headline text-4xl md:text-5xl mb-6">AI Personal Stylist</h2>
+          <h2 className="font-headline text-4xl md:text-5xl mb-6">AI 퍼스널 스타일리스트</h2>
           <p className="font-body text-lg opacity-80 max-w-2xl mx-auto">
-            Describe a garment or a mood you wish to capture, and our H.O.S_Mall AI will craft an evocative narrative and professional styling tips just for you.
+            원하는 의상이나 무드를 설명해 주세요. H.O.S_Mall AI가 당신만을 위한 감각적인 내러티브와 전문적인 스타일링 팁을 제안합니다.
           </p>
         </div>
 
         <div className="space-y-8 bg-white/5 p-8 rounded-lg backdrop-blur-sm border border-white/10">
           <div className="space-y-4">
             <Textarea
-              placeholder="e.g., A deep charcoal wool coat for a rainy London evening..."
+              placeholder="예: 비 내리는 서울의 저녁에 어울리는 짙은 차콜 울 코트..."
               className="bg-white/10 border-white/20 text-white placeholder:text-white/40 min-h-[120px] focus-visible:ring-accent"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -54,10 +54,10 @@ export function AINarrative() {
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Weaving your fashion story...
+                  당신의 패션 스토리를 구성 중입니다...
                 </>
               ) : (
-                'Generate Narrative'
+                '내러티브 생성하기'
               )}
             </Button>
           </div>

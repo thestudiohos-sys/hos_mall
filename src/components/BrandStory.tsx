@@ -9,21 +9,21 @@ export function BrandStory() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 order-2 md:order-1">
-            <h4 className="text-accent uppercase tracking-[0.3em] font-bold text-sm">Philosophy</h4>
+            <h4 className="text-accent uppercase tracking-[0.3em] font-bold text-sm">브랜드 철학</h4>
             <h2 className="font-headline text-4xl md:text-6xl text-primary leading-tight">
-              Crafting Legacies, <br /> One Stitch at a Time.
+              한 땀 한 땀, <br /> 유산을 짓다.
             </h2>
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
-              Founded on the principles of timeless elegance and uncompromising quality, H.O.S_Mall was born from a desire to bridge the gap between haute couture and everyday wearable luxury. Our artisans spend hundreds of hours perfecting every silhouette.
+              유행을 타지 않는 우아함과 타협하지 않는 품질을 원칙으로 설립된 H.O.S_Mall은 오뜨 꾸뛰르와 일상적인 럭셔리 사이의 가교가 되고자 탄생했습니다. 우리 장인들은 완벽한 실루엣을 위해 수백 시간을 쏟아붓습니다.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div>
-                <h3 className="font-headline text-3xl text-primary mb-2">Sustainable</h3>
-                <p className="text-sm text-muted-foreground">Ethically sourced materials and zero-waste production cycles.</p>
+                <h3 className="font-headline text-3xl text-primary mb-2">지속 가능성</h3>
+                <p className="text-sm text-muted-foreground">윤리적으로 조달된 소재와 폐기물 제로 생산 사이클.</p>
               </div>
               <div>
-                <h3 className="font-headline text-3xl text-primary mb-2">Artisan</h3>
-                <p className="text-sm text-muted-foreground">Every piece is hand-finished by master craftsmen in our atelier.</p>
+                <h3 className="font-headline text-3xl text-primary mb-2">장인 정신</h3>
+                <p className="text-sm text-muted-foreground">모든 피스는 아틀리에의 마스터 장인들에 의해 수작업으로 마무리됩니다.</p>
               </div>
             </div>
           </div>

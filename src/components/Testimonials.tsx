@@ -7,15 +7,15 @@ export function Testimonials() {
   
   const testimonials = [
     {
-      name: "Elara Vance",
-      role: "Fashion Consultant",
-      text: "The quality of craftsmanship at H.O.S_Mall is unparalleled. Every garment feels like a personal commission.",
+      name: "엘라라 반스",
+      role: "패션 컨설턴트",
+      text: "H.O.S_Mall의 장인 정신은 타의 추종을 불허합니다. 모든 옷이 마치 저만을 위해 특별히 주문 제작된 것 같습니다.",
       image: users[0]?.imageUrl
     },
     {
-      name: "Marcus Thorne",
-      role: "Creative Director",
-      text: "I've been wearing their collection for years. The way they blend timeless silhouettes with modern edge is genius.",
+      name: "마커스 쏜",
+      role: "크리에이티브 디렉터",
+      text: "수년째 이 브랜드의 컬렉션을 입고 있습니다. 유행을 타지 않는 실루엣에 현대적인 감각을 더하는 방식은 정말 천재적입니다.",
       image: users[1]?.imageUrl
     }
   ];
@@ -24,8 +24,8 @@ export function Testimonials() {
     <section className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl text-primary mb-4">Trusted by Visionaries</h2>
-          <p className="text-muted-foreground uppercase tracking-widest text-sm font-bold">Client Voices</p>
+          <h2 className="font-headline text-4xl md:text-5xl text-primary mb-4">선구자들이 신뢰하는 브랜드</h2>
+          <p className="text-muted-foreground uppercase tracking-widest text-sm font-bold">고객의 목소리</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
