@@ -8,7 +8,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="font-headline text-3xl font-black tracking-tighter text-primary">
-            ANTIGRAVITY
+            H.O.S_Mall
           </Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium uppercase tracking-widest text-muted-foreground">
             <Link href="#collections" className="hover:text-primary transition-colors">컬렉션</Link>

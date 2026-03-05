@@ -11,19 +11,19 @@ export function BrandStory() {
           <div className="space-y-8 order-2 md:order-1">
             <h4 className="text-accent uppercase tracking-[0.3em] font-bold text-sm">브랜드 철학</h4>
             <h2 className="font-headline text-4xl md:text-6xl text-primary leading-tight">
-              가벼움의 미학, <br /> 한계를 넘어서.
+              시간을 초월하는 <br /> 우아함의 정수.
             </h2>
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
-              전통적인 럭셔리의 무게감을 덜어내고, 현대적인 가벼움을 지향하는 Antigravity는 혁신적인 소재와 정교한 테일러링을 통해 새로운 기준을 제시합니다. 우리의 모든 디자인은 자유로운 움직임과 영원한 우아함을 담고 있습니다.
+              전통적인 럭셔리의 가치를 계승하면서도 끊임없이 변화를 추구하는 H.O.S_Mall은 정교한 테일러링과 최고급 소재를 통해 당신의 일상에 특별함을 선사합니다. 우리의 모든 디자인은 시대를 아우르는 세련미를 담고 있습니다.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div>
-                <h3 className="font-headline text-3xl text-primary mb-2">혁신</h3>
-                <p className="text-sm text-muted-foreground">첨단 소재와 전통 기법의 융합을 통한 새로운 실루엣.</p>
+                <h3 className="font-headline text-3xl text-primary mb-2">장인 정신</h3>
+                <p className="text-sm text-muted-foreground">숙련된 장인들의 손길로 완성되는 완벽한 디테일.</p>
               </div>
               <div>
-                <h3 className="font-headline text-3xl text-primary mb-2">미니멀리즘</h3>
-                <p className="text-sm text-muted-foreground">불필요한 요소를 제거한 정제된 럭셔리의 정수.</p>
+                <h3 className="font-headline text-3xl text-primary mb-2">본질적 가치</h3>
+                <p className="text-sm text-muted-foreground">유행에 흔들리지 않는 클래식 럭셔리의 미학.</p>
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ export function BrandStory() {
             {storyImg?.imageUrl && (
               <Image
                 src={storyImg.imageUrl}
-                alt={storyImg.description || 'Antigravity story'}
+                alt={storyImg.description || 'H.O.S_Mall story'}
                 fill
                 className="object-cover"
                 data-ai-hint={storyImg.imageHint}

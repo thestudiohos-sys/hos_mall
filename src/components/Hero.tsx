@@ -11,7 +11,7 @@ export function Hero() {
       {heroImg?.imageUrl && (
         <Image
           src={heroImg.imageUrl}
-          alt={heroImg.description || 'Antigravity fashion hero'}
+          alt={heroImg.description || 'H.O.S_Mall fashion hero'}
           fill
           className="object-cover transition-transform duration-1000 hover:scale-105"
           priority
@@ -20,10 +20,10 @@ export function Hero() {
       )}
       <div className="container relative z-20 mx-auto flex h-full flex-col items-center justify-center px-4 text-center text-white">
         <h1 className="font-headline text-5xl md:text-8xl font-black mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700 uppercase tracking-tighter">
-          ANTIGRAVITY
+          H.O.S_Mall
         </h1>
         <p className="font-body text-lg md:text-2xl max-w-2xl mb-10 opacity-90 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-          중력을 거스르는 탁월함. Antigravity에서 럭셔리 장인 정신과 미래적 비전의 조화를 경험하십시오.
+          우아함의 새로운 기준. H.O.S_Mall에서 럭셔리 장인 정신과 현대적 감각의 완벽한 조화를 경험하십시오.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
           <Button size="lg" className="bg-white text-primary hover:bg-secondary hover:text-primary rounded-none px-10 py-8 text-sm uppercase tracking-[0.2em]">
