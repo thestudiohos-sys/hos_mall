@@ -29,10 +29,10 @@ const prompt = ai.definePrompt({
   name: 'aiGeneratedStylingTipsPrompt',
   input: { schema: AIGeneratedStylingTipsInputSchema },
   output: { schema: AIGeneratedStylingTipsOutputSchema },
-  prompt: `You are a highly creative and sophisticated fashion stylist and copywriter for H.O.S_Mall, a luxury clothing brand.
+  prompt: `You are a highly creative and sophisticated fashion stylist and copywriter for Antigravity, a luxury clothing brand known for its weightless elegance and futuristic minimalism.
 Your task is to generate compelling styling tips and an evocative description for a given clothing item.
-The styling tips should be practical and inspire potential customers on how to wear the item for various occasions, enhancing its appeal.
-The evocative description should highlight the unique charm, fabric, design, and emotional connection of the clothing item, making it sound irresistible.
+The styling tips should be practical and inspire potential customers on how to wear the item for various occasions, emphasizing a modern and effortless look.
+The evocative description should highlight the light-as-air fabric, clean lines, and the sense of freedom it provides the wearer.
 
 IMPORTANT: You MUST provide all your responses in Korean.
 

@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'H.O.S_Mall Ascent | 프리미엄 럭셔리 패션 & 컬렉션',
-  description: 'H.O.S_Mall과 함께 패션의 정점을 경험하세요. 유니크한 컬렉션과 브랜드 철학을 만나보세요.',
+  title: 'Antigravity | 프리미엄 럭셔리 패션 & 컬렉션',
+  description: 'Antigravity와 함께 중력을 거스르는 패션의 정점을 경험하세요. 유니크한 컬렉션과 브랜드 철학을 만나보세요.',
 };
 
 export default function RootLayout({

@@ -11,19 +11,19 @@ export function BrandStory() {
           <div className="space-y-8 order-2 md:order-1">
             <h4 className="text-accent uppercase tracking-[0.3em] font-bold text-sm">브랜드 철학</h4>
             <h2 className="font-headline text-4xl md:text-6xl text-primary leading-tight">
-              한 땀 한 땀, <br /> 유산을 짓다.
+              가벼움의 미학, <br /> 한계를 넘어서.
             </h2>
             <p className="font-body text-lg text-muted-foreground leading-relaxed">
-              유행을 타지 않는 우아함과 타협하지 않는 품질을 원칙으로 설립된 H.O.S_Mall은 오뜨 꾸뛰르와 일상적인 럭셔리 사이의 가교가 되고자 탄생했습니다. 우리 장인들은 완벽한 실루엣을 위해 수백 시간을 쏟아붓습니다.
+              전통적인 럭셔리의 무게감을 덜어내고, 현대적인 가벼움을 지향하는 Antigravity는 혁신적인 소재와 정교한 테일러링을 통해 새로운 기준을 제시합니다. 우리의 모든 디자인은 자유로운 움직임과 영원한 우아함을 담고 있습니다.
             </p>
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div>
-                <h3 className="font-headline text-3xl text-primary mb-2">지속 가능성</h3>
-                <p className="text-sm text-muted-foreground">윤리적으로 조달된 소재와 폐기물 제로 생산 사이클.</p>
+                <h3 className="font-headline text-3xl text-primary mb-2">혁신</h3>
+                <p className="text-sm text-muted-foreground">첨단 소재와 전통 기법의 융합을 통한 새로운 실루엣.</p>
               </div>
               <div>
-                <h3 className="font-headline text-3xl text-primary mb-2">장인 정신</h3>
-                <p className="text-sm text-muted-foreground">모든 피스는 아틀리에의 마스터 장인들에 의해 수작업으로 마무리됩니다.</p>
+                <h3 className="font-headline text-3xl text-primary mb-2">미니멀리즘</h3>
+                <p className="text-sm text-muted-foreground">불필요한 요소를 제거한 정제된 럭셔리의 정수.</p>
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ export function BrandStory() {
             {storyImg?.imageUrl && (
               <Image
                 src={storyImg.imageUrl}
-                alt={storyImg.description || 'Our story'}
+                alt={storyImg.description || 'Antigravity story'}
                 fill
                 className="object-cover"
                 data-ai-hint={storyImg.imageHint}
