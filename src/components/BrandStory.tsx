@@ -27,14 +27,16 @@ export function BrandStory() {
               </div>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden order-1 md:order-2">
-            <Image
-              src={storyImg?.imageUrl || ''}
-              alt={storyImg?.description || ''}
-              fill
-              className="object-cover"
-              data-ai-hint={storyImg?.imageHint}
-            />
+          <div className="relative aspect-[4/5] overflow-hidden order-1 md:order-2 bg-secondary/20">
+            {storyImg?.imageUrl && (
+              <Image
+                src={storyImg.imageUrl}
+                alt={storyImg.description || 'Our story'}
+                fill
+                className="object-cover"
+                data-ai-hint={storyImg.imageHint}
+              />
+            )}
           </div>
         </div>
       </div>

@@ -6,16 +6,18 @@ export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero');
 
   return (
-    <section className="relative h-[90vh] w-full overflow-hidden">
+    <section className="relative h-[90vh] w-full overflow-hidden bg-primary/10">
       <div className="absolute inset-0 bg-black/30 z-10" />
-      <Image
-        src={heroImg?.imageUrl || ''}
-        alt={heroImg?.description || ''}
-        fill
-        className="object-cover transition-transform duration-1000 hover:scale-105"
-        priority
-        data-ai-hint={heroImg?.imageHint}
-      />
+      {heroImg?.imageUrl && (
+        <Image
+          src={heroImg.imageUrl}
+          alt={heroImg.description || 'Luxury fashion hero'}
+          fill
+          className="object-cover transition-transform duration-1000 hover:scale-105"
+          priority
+          data-ai-hint={heroImg.imageHint}
+        />
+      )}
       <div className="container relative z-20 mx-auto flex h-full flex-col items-center justify-center px-4 text-center text-white">
         <h1 className="font-headline text-5xl md:text-8xl font-black mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
           The Ascent of Style
