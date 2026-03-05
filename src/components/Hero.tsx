@@ -4,19 +4,10 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Download, ChevronRight } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { ChevronRight } from 'lucide-react';
 
 export function Hero() {
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero');
-  const { toast } = useToast();
-
-  const handleDownload = () => {
-    toast({
-      title: "룩북 다운로드 시작",
-      description: "H.O.S_Mall 2024 Digital Lookbook 다운로드를 시작합니다.",
-    });
-  };
 
   return (
     <section className="relative h-[95vh] w-full overflow-hidden">
@@ -45,15 +36,6 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row gap-6 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
           <Button size="lg" className="bg-white text-primary hover:bg-accent hover:text-white transition-all duration-300 rounded-none px-12 py-8 text-sm uppercase tracking-[0.3em] font-bold">
             컬렉션 쇼핑하기 <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            onClick={handleDownload}
-            className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300 rounded-none px-12 py-8 text-sm uppercase tracking-[0.3em] font-bold group"
-          >
-            <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-            디지털 룩북 다운로드
           </Button>
         </div>
       </div>

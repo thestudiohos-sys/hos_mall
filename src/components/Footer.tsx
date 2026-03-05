@@ -2,20 +2,10 @@
 "use client";
 
 import Link from 'next/link';
-import { Apple, PlayCircle, Download, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Apple, PlayCircle, Instagram, Twitter, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
 
 export function Footer() {
-  const { toast } = useToast();
-
-  const handleDownload = () => {
-    toast({
-      title: "디지털 룩북",
-      description: "고화질 PDF 룩북 다운로드를 시작합니다.",
-    });
-  };
-
   return (
     <footer className="bg-primary text-white pt-24 pb-12">
       <div className="container mx-auto px-4">
@@ -53,16 +43,6 @@ export function Footer() {
           </div>
           
           <div className="space-y-8">
-            <div>
-              <h4 className="font-black mb-6 text-xs uppercase tracking-[0.3em] text-accent">Digital Resources</h4>
-              <Button 
-                variant="outline" 
-                onClick={handleDownload}
-                className="w-full bg-transparent border-white/20 hover:bg-white hover:text-primary transition-all duration-300 rounded-none h-14 uppercase tracking-[0.2em] text-[10px] font-bold"
-              >
-                <Download className="mr-2 h-4 w-4" /> 전체 룩북 다운로드
-              </Button>
-            </div>
             <div className="space-y-4">
               <h4 className="text-[10px] uppercase tracking-widest font-black opacity-40">Mobile Application</h4>
               <div className="flex gap-3">

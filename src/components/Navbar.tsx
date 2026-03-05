@@ -2,20 +2,10 @@
 "use client";
 
 import Link from 'next/link';
-import { ShoppingBag, Menu, Search, Download, User } from 'lucide-react';
+import { ShoppingBag, Menu, Search, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
 
 export function Navbar() {
-  const { toast } = useToast();
-
-  const handleDownload = () => {
-    toast({
-      title: "카탈로그 요청됨",
-      description: "H.O.S_Mall 2024 시그니처 카탈로그를 다운로드합니다.",
-    });
-  };
-
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-xl">
       <div className="container mx-auto flex h-24 items-center justify-between px-4">
@@ -33,15 +23,6 @@ export function Navbar() {
         
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-2 pr-4 border-r border-primary/10">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={handleDownload}
-              className="text-primary hover:text-accent"
-              title="디지털 카탈로그 다운로드"
-            >
-              <Download className="h-5 w-5" />
-            </Button>
             <Button variant="ghost" size="icon" className="text-primary hover:text-accent">
               <Search className="h-5 w-5" />
             </Button>
