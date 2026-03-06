@@ -33,7 +33,7 @@ export function Navbar() {
             <div className="hidden sm:flex items-center gap-2 pr-4 border-r border-primary/10">
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
+                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
                     <Search className="h-5 w-5" />
                   </Button>
                 </TooltipTrigger>
@@ -46,9 +46,11 @@ export function Navbar() {
             <div className="flex items-center gap-1 md:gap-2">
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
-                    <UserPlus className="h-5 w-5" />
-                  </Button>
+                  <Link href="/signup">
+                    <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
+                      <UserPlus className="h-5 w-5" />
+                    </Button>
+                  </Link>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>회원가입</p>
@@ -57,7 +59,7 @@ export function Navbar() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
+                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
                     <User className="h-5 w-5" />
                   </Button>
                 </TooltipTrigger>
@@ -68,7 +70,7 @@ export function Navbar() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" className="relative text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
+                  <Button variant="ghost" size="icon" className="relative text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
                     <ShoppingBag className="h-5 w-5" />
                     <span className="absolute top-1 right-1 w-2 h-2 bg-accent rounded-full animate-pulse" />
                   </Button>
@@ -80,7 +82,7 @@ export function Navbar() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" className="lg:hidden text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
+                  <Button variant="ghost" size="icon" className="lg:hidden text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
                     <Menu className="h-6 w-6" />
                   </Button>
                 </TooltipTrigger>
