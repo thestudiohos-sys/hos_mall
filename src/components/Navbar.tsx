@@ -17,17 +17,18 @@ export function Navbar() {
             <Link href="#collections" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-accent">컬렉션</Link>
             <Link href="#story" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-accent">브랜드 스토리</Link>
             <Link href="#ai-stylist" className="hover:text-accent transition-colors py-2 border-b-2 border-transparent hover:border-accent">AI 스타일리스트</Link>
+            <Link href="/vip" className="text-accent hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-accent font-black">VIP 전용관</Link>
             <Link href="#contact" className="hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-accent">문의</Link>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-2 pr-4 border-r border-primary/10">
             <Button variant="ghost" size="icon" className="text-primary hover:text-accent">
               <Search className="h-5 w-5" />
             </Button>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" className="text-primary hover:text-accent">
               <User className="h-5 w-5" />
