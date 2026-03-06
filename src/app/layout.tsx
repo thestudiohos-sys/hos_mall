@@ -1,6 +1,7 @@
 
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
+import { CustomCursor } from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
   title: 'H.O.S_Mall | 프리미엄 럭셔리 패션 & 컬렉션',
@@ -19,7 +20,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased selection:bg-accent selection:text-white">{children}</body>
+      <body className="font-body antialiased selection:bg-accent selection:text-white">
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }
