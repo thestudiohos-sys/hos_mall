@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { ShoppingBag, Menu, Search, User } from 'lucide-react';
+import { ShoppingBag, Menu, Search, User, UserPlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -43,7 +43,18 @@ export function Navbar() {
               </Tooltip>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 md:gap-2">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
+                    <UserPlus className="h-5 w-5" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>회원가입</p>
+                </TooltipContent>
+              </Tooltip>
+
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button variant="ghost" size="icon" className="text-primary hover:text-accent transition-all hover:scale-110 active:scale-95">
@@ -51,7 +62,7 @@ export function Navbar() {
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>마이페이지</p>
+                  <p>마이페이지 (로그인)</p>
                 </TooltipContent>
               </Tooltip>
 
@@ -74,7 +85,7 @@ export function Navbar() {
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>메뉴 열기</p>
+                  <p>전체 메뉴</p>
                 </TooltipContent>
               </Tooltip>
 
