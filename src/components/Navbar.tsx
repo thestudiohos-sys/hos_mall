@@ -40,9 +40,11 @@ export function Navbar() {
               <Menu className="h-6 w-6" />
             </Button>
             <div className="hidden md:block ml-2">
-              <Button className="font-black uppercase tracking-[0.2em] text-[10px] px-8 py-6 rounded-none shadow-xl hover:shadow-accent/20 transition-all">
-                VIP 전용관
-              </Button>
+              <Link href="/vip">
+                <Button className="font-black uppercase tracking-[0.2em] text-[10px] px-8 py-6 rounded-none shadow-xl hover:shadow-accent/20 transition-all">
+                  VIP 전용관
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
