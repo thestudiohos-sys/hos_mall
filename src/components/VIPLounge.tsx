@@ -90,7 +90,7 @@ export function VIPLounge() {
                     {benefits.map((benefit, index) => (
                         <Card
                             key={index}
-                            className="group bg-zinc-900/40 backdrop-blur-xl border-zinc-800 hover:border-amber-500/50 transition-all duration-300 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700"
+                            className="group bg-zinc-900/50 backdrop-blur-xl border-zinc-800 hover:border-amber-500/50 transition-all duration-300 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             <CardContent className="p-8">
