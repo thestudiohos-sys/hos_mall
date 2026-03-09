@@ -7,15 +7,12 @@ import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Checkbox } from '@/components/ui/checkbox';
-import { UserPlus, ArrowRight } from 'lucide-react';
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
-import { auth, db } from "@/lib/firebase";
+import { LogIn, ArrowRight } from 'lucide-react';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/lib/firebase";
 import { useAuth } from '@/context/AuthContext';
 
-export default function SignupPage() {
-    const [name, setName] = useState('');
+export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -36,25 +33,11 @@ export default function SignupPage() {
         setError(null);
 
         try {
-            // Create user in Firebase Auth
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
-
-            // Update profile with name
-            await updateProfile(user, { displayName: name });
-
-            // Store extra user data in Firestore
-            await setDoc(doc(db, "users", user.uid), {
-                name: name,
-                email: email,
-                createdAt: new Date().toISOString(),
-                role: 'member'
-            });
-
+            await signInWithEmailAndPassword(auth, email, password);
             router.push('/');
         } catch (err: any) {
-            console.error("Signup error:", err);
-            setError(err.message || "회원가입 중 오류가 발생했습니다.");
+            console.error("Login error:", err);
+            setError("이메일 또는 비밀번호가 잘못되었습니다.");
         } finally {
             setIsLoading(false);
         }
@@ -69,10 +52,10 @@ export default function SignupPage() {
             <div className="w-full max-w-[450px] space-y-8 bg-white/50 backdrop-blur-md p-8 md:p-12 border border-primary/10 shadow-2xl">
                 <div className="space-y-2 text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent mb-4">
-                        <UserPlus className="w-6 h-6" />
+                        <LogIn className="w-6 h-6" />
                     </div>
-                    <h1 className="text-3xl font-black tracking-tight text-primary uppercase">Create Account</h1>
-                    <p className="text-muted-foreground text-sm tracking-widest uppercase">럭셔리한 혜택의 시작, H.O.S_Mall 멤버십</p>
+                    <h1 className="text-3xl font-black tracking-tight text-primary uppercase">Welcome Back</h1>
+                    <p className="text-muted-foreground text-sm tracking-widest uppercase">당신만의 럭셔리 라이프스타일, 로그인을 통해 이어가세요</p>
                 </div>
 
                 {error && (
@@ -82,18 +65,6 @@ export default function SignupPage() {
                 )}
 
                 <form onSubmit={onSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                        <Label htmlFor="name" className="text-[10px] font-bold uppercase tracking-widest">이름</Label>
-                        <Input
-                            id="name"
-                            placeholder="Name"
-                            required
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            className="rounded-none border-t-0 border-x-0 border-b border-primary/20 bg-transparent px-0 focus-visible:ring-0 focus-visible:border-accent transition-all duration-500"
-                        />
-                    </div>
-
                     <div className="space-y-2">
                         <Label htmlFor="email" className="text-[10px] font-bold uppercase tracking-widest">이메일</Label>
                         <Input
@@ -120,17 +91,10 @@ export default function SignupPage() {
                         />
                     </div>
 
-                    <div className="flex items-center space-x-2 py-2">
-                        <Checkbox id="terms" required />
-                        <label htmlFor="terms" className="text-xs text-muted-foreground leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                            <span className="underline cursor-pointer hover:text-accent">약관 및 개인정보 정책</span>에 동의합니다.
-                        </label>
-                    </div>
-
                     <Button type="submit" disabled={isLoading} className="w-full bg-primary text-primary-foreground h-14 rounded-none font-black uppercase tracking-[0.2em] text-xs hover:bg-accent transition-all duration-500 group">
-                        {isLoading ? "Creating..." : (
+                        {isLoading ? "Logging in..." : (
                             <span className="flex items-center gap-2">
-                                멤버십 가입하기 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                로그인하기 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                         )}
                     </Button>
@@ -138,9 +102,9 @@ export default function SignupPage() {
 
                 <div className="text-center pt-4">
                     <p className="text-xs text-muted-foreground tracking-widest uppercase">
-                        이미 계정이 있으신가요?{" "}
-                        <Link href="/login" className="text-primary font-bold hover:text-accent underline underline-offset-4 transition-colors">
-                            로그인하기
+                        아직 회원이 아니신가요?{" "}
+                        <Link href="/signup" className="text-primary font-bold hover:text-accent underline underline-offset-4 transition-colors">
+                            멤버십 가입하기
                         </Link>
                     </p>
                 </div>

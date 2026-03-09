@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { ShoppingBag, Menu, Search, User, UserPlus } from 'lucide-react';
+import { ShoppingBag, Menu, Search, User, UserPlus, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -10,8 +10,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useAuth } from '@/context/AuthContext';
 
 export function Navbar() {
+  const { user, logout } = useAuth();
+
   return (
     <TooltipProvider delayDuration={100}>
       <nav className="sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-xl">
@@ -44,29 +47,64 @@ export function Navbar() {
             </div>
 
             <div className="flex items-center gap-1 md:gap-2">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link href="/signup">
-                    <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
-                      <UserPlus className="h-5 w-5" />
-                    </Button>
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>회원가입</p>
-                </TooltipContent>
-              </Tooltip>
+              {!user ? (
+                <>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link href="/signup">
+                        <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
+                          <UserPlus className="h-5 w-5" />
+                        </Button>
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>회원가입</p>
+                    </TooltipContent>
+                  </Tooltip>
 
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
-                    <User className="h-5 w-5" />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>마이페이지 (로그인)</p>
-                </TooltipContent>
-              </Tooltip>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link href="/login">
+                        <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
+                          <User className="h-5 w-5" />
+                        </Button>
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>로그인</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </>
+              ) : (
+                <>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md">
+                        <User className="h-5 w-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{user.displayName || '내 계정'}</p>
+                    </TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => logout()}
+                        className="text-primary hover:text-accent hover:bg-accent/10 transition-all hover:scale-110 active:scale-95 rounded-none md:rounded-md"
+                      >
+                        <LogOut className="h-5 w-5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>로그아웃</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </>
+              )}
 
               <Tooltip>
                 <TooltipTrigger asChild>

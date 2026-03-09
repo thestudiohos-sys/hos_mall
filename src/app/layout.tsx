@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: 'H.O.S_Mall과 함께 럭셔리 패션의 정점을 경험하세요. 유니크한 컬렉션과 브랜드 철학을 만나보세요.',
 };
 
+import { AuthProvider } from '@/context/AuthContext';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,8 +23,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased selection:bg-accent selection:text-white">
-        <CustomCursor />
-        {children}
+        <AuthProvider>
+          <CustomCursor />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
